@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBusinessData xmlns="http://teamcenter.com/BusinessModel/TcBusinessData" Date="">
+<Add>
+   <Library name="AW2Runtime" createRelease="tc2412" serviceLibrary="false" namespace=""
+       isThirdParty="false" description="AW2Runtime">
+     <DependentOn name="metaframework"/>
+     <DependentOn name="sa"/>
+     <DependentOn name="tccore"/>
+     <DependentOn name="tc"/>
+     <DependentOn name="cxpom"/>
+     <DependentOn name="grm"/>
+     <DependentOn name="ae"/>
+     <DependentOn name="ce"/>
+   </Library>
+   <Library name="AW2SoaPp" createRelease="tc2412" serviceLibrary="true" namespace="AW2::Soa::Pp"
+       isThirdParty="false"/>
+   <Library name="AW2SoaTT" createRelease="tc2412" serviceLibrary="true" namespace="AW2::Soa::TT"
+       isThirdParty="false"/>
+   <ServiceInterface name="GetObjectName" namespace="AW2::Soa::Pp" libraryName="AW2SoaPp"
+       serviceLibraryRef="" dependencies="" createRelease="tc2412" description="GetObjectName"/>
+   <ServiceInterface name="GetItemName" namespace="AW2::Soa::TT" libraryName="AW2SoaTT"
+       serviceLibraryRef="" dependencies="" createRelease="tc2412" description="GetItemName"/>
+   <TcAttributeAttach className="Item">
+     <TcAttribute attributeName="aw2Integer_1" description="" attributeType="POM_int"
+         maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" initialValue="NULL"
+         lowerBoundValue="" upperBoundValue=""/>
+     <TcAttribute attributeName="aw2Integer_2" description="" attributeType="POM_int"
+         maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" initialValue="NULL"
+         lowerBoundValue="" upperBoundValue=""/>
+   </TcAttributeAttach>
+   <TcAttributeAttach className="ItemRevision">
+     <TcAttribute attributeName="aw2_CountNumber" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+     <TcAttribute attributeName="aw2_Number" description="" attributeType="POM_int"
+         maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+   </TcAttributeAttach>
+   <OperationTemplate id="std::string#AW2::Soa::Pp::GetObjectName::getDocumentName#const,std::string,&amp;"
+       name="AW2::Soa::Pp::GetObjectName::getDocumentName" returnConst="false" createRelease="tc2412"
+       description="" const="false" static="false" returnFreeMemory="false" returnDescription="">
+     <OperationReturnDataTypeRef dataType="std::string" qualifier=""/>
+     <OperationParameter name="documentUid" description="Document Uid" const="true"
+         inputOutput="Input" freeOutputMemory="false" defaultValue="">
+       <OperationParameterDataTypeRef dataType="std::string" qualifier="&amp;"/>
+     </OperationParameter>
+   </OperationTemplate>
+   <OperationTemplate id="std::string#AW2::Soa::TT::GetItemName::getItemStringName#const,std::string,&amp;"
+       name="AW2::Soa::TT::GetItemName::getItemStringName" returnConst="false" createRelease="tc2412"
+       description="" const="false" static="false" returnFreeMemory="false" returnDescription="">
+     <OperationReturnDataTypeRef dataType="std::string" qualifier=""/>
+     <OperationParameter name="itemId" description="ItemId" const="true" inputOutput="Input"
+         freeOutputMemory="false" defaultValue="">
+       <OperationParameterDataTypeRef dataType="std::string" qualifier="&amp;"/>
+     </OperationParameter>
+   </OperationTemplate>
+   <BusinessObjectInterface name="Item" namespace="aw2::aw2training" libraryName="AW2Runtime"
+       createRelease="tc2412" typeName="Item" primaryInterface="false" description="Interface Name for Business Object Item"/>
+   <Operation id="getItemStringName#const,std::string,&amp;" name="getItemStringName"
+       createRelease="tc2412" description="" opTemplate="std::string#AW2::Soa::TT::GetItemName::getItemStringName#const,std::string,&amp;"
+       interface="AW2::Soa::TT::GetItemName" isPublished="true" canOverride="false"
+       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
+       returnDescription="" component="" useCase="" dependencies="" exceptionCondition="">
+     <ParameterInfo parameterName="itemId" description="ItemId"/>
+   </Operation>
+   <Operation id="getDocumentName#const,std::string,&amp;" name="getDocumentName"
+       createRelease="tc2412" description="" opTemplate="std::string#AW2::Soa::Pp::GetObjectName::getDocumentName#const,std::string,&amp;"
+       interface="AW2::Soa::Pp::GetObjectName" isPublished="true" canOverride="false"
+       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
+       returnDescription="" component="" useCase="" dependencies="" exceptionCondition="">
+     <ParameterInfo parameterName="documentUid" description="Document Uid"/>
+   </Operation>
+   <PropertyOperation id="getAw2Integer_3#int,&amp;$bool,&amp;$bool,&amp;" name="getAw2Integer_3"
+       createRelease="tc2412" description="Getter for an Integer Property" propertyName="aw2Integer_3"
+       operationType="Getter" opTemplate="int#get#int,&amp;$bool,&amp;$bool,&amp;"
+       interface="aw2::aw2training::Item" isPublished="true" canOverride="true" isPreActionAllowed="false"
+       isPostActionAllowed="false" isPreConditionAllowed="false" returnDescription="Status. 0 if successful"/>
+   <TcPropertyAttach typeName="Item">
+     <TcProperty propName="aw2Integer_3" propTypeName="Runtime" propValueType="PROP_int"
+         propMaxStringLength="0" isArray="false" arrayLength="0" description="" referencedTypeConstant=""
+         referencedType="" fnd0ReferencingAttrName=""/>
+   </TcPropertyAttach>
+   <TcPropertyAttach typeName="ItemCreI">
+     <OperationInputProperty propName="aw2Integer_1" compoundObjectConstant="" srcPropName="aw2Integer_1"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </TcPropertyAttach>
+   <TcPropertyAttach typeName="ItemCreI">
+     <OperationInputProperty propName="aw2Integer_2" compoundObjectConstant="" srcPropName="aw2Integer_2"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </TcPropertyAttach>
+   <TcPropertyAttach typeName="ItemCreI">
+     <OperationInputProperty propName="aw2Integer_3" compoundObjectConstant="" srcPropName="aw2Integer_3"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </TcPropertyAttach>
+   <TcPropertyAttach typeName="ItemRevisionCreI">
+     <OperationInputProperty propName="aw2_CountNumber" compoundObjectConstant=""
+         srcPropName="aw2_CountNumber" compoundObjectType="" fieldType="SimpleProperty"
+         description=""/>
+   </TcPropertyAttach>
+   <TcPropertyAttach typeName="ItemRevisionCreI">
+     <OperationInputProperty propName="aw2_Number" compoundObjectConstant="" srcPropName="aw2_Number"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </TcPropertyAttach>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="Item" propertyName="aw2Integer_1"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="Item" propertyName="aw2Integer_2"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="Item" propertyName="aw2Integer_3"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="ItemRevision" propertyName="aw2_CountNumber"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="ItemRevision" propertyName="aw2_Number"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="Item" propertyName="aw2Integer_1"
+       value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="Item" propertyName="aw2Integer_2"
+       value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="Item" propertyName="aw2Integer_3"
+       value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="ItemRevision" propertyName="aw2_CountNumber"
+       value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="ItemRevision" propertyName="aw2_Number"
+       value="Write"/>
+   <TcExtension name="AW2ChangeDatasetCreatePost" internal="false" cannedExtension="false"
+       languageType="CPlusPlus" libraryName="libAW2Runtime" description="AW2ChangeDatasetCreatePost">
+     <TcExtensionValidity parameter="TYPE:IMAN_specification:createPost#Teamcenter::CreateInput,*:3"/>
+   </TcExtension>
+   <TcExtension name="AW2PPItemRevisionCreatePost" internal="false" cannedExtension="false"
+       languageType="CPlusPlus" libraryName="libAW2Runtime" description="">
+     <TcExtensionValidity parameter="TYPE:ItemRevision:createPost#Teamcenter::CreateInput,*:3"/>
+   </TcExtension>
+   <TcExtensionAttach extensionName="AW2PPItemRevisionCreatePost" operationName="createPost#Teamcenter::CreateInput,*"
+       isActive="true" extendableElementName="ItemRevision" extendableElementType="Type"
+       extensionPointType="PostAction" conditionName="isTrue" description=""/>
+   <TcExtensionAttach extensionName="AW2ChangeDatasetCreatePost" operationName="createPost#Teamcenter::CreateInput,*"
+       isActive="true" extendableElementName="IMAN_specification" extendableElementType="Type"
+       extensionPointType="PostAction" conditionName="isTrue" description=""/>
+   <TcLOV name="AW2_CountNumber_LOV" lovType="ListOfValuesString" usage="Exhaustive"
+       description="">
+     <TcLOVValue value="One" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Two" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Three" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Four" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Five" description="" conditionName="isTrue"/>
+   </TcLOV>
+   <TcLOVAttach lovName="AW2_CountNumber_LOV" typeName="ItemRevision">
+     <TcLOVAttachPropertyInfo valuePropertyName="aw2_CountNumber" conditionName="isTrue"
+         override="false" level="0"/>
+   </TcLOVAttach>
+</Add>
+</TcBusinessData>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<import>
+  <Client abbreviation="AWClient" name="AWClient">
+    <ClientScope hostingClientName="" name="PpCustomParticipant" uri="PpCustomParticipant">
+      <ColumnConfig columnConfigId="PpCustomParticipant" sortBy="-1" sortDirection="">
+        <ColumnDef columnName="user_id" filterable="true" hidden="false" objectType="User" propertyName="user_id" width="100"/>
+        <ColumnDef columnName="user_name" filterable="true" hidden="false" objectType="User" propertyName="user_name" width="100"/>
+        <ColumnDef columnName="PA9" filterable="true" hidden="false" objectType="User" propertyName="REF(person,Person).PA9" width="150"/>
+      </ColumnConfig>
+    </ClientScope>
+  </Client>
+</import>

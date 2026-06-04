@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TcBusinessDataIncludes currentTemplateVersion="2312.0_0" displayName="training" enableOpsDataDeploy="true" guid="50D1E434D15FFFEAA9A72243EAD218B9" isDescriptionMandatory="false" name="aw2training" optional="true" prefixes="AW2" teamcenterTemplate="false">
+    <include file="foundation_template.xml"/>
+    <include file="aws2_template.xml"/>
+</TcBusinessDataIncludes>

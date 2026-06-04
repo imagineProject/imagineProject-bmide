@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+// @<COPYRIGHT>@
+// ==================================================
+// Copyright 2014.
+// Siemens Product Lifecycle Management Software Inc.
+// All Rights Reserved.
+// ==================================================
+// @<COPYRIGHT>@
+-->
+<!-- Default style sheet for displaying item rev Info Panel in Active Workspace Client. -->
+<rendering>
+    <header>
+        <property name="object_string"/>
+    </header>
+    <page titleKey="Information Stylesheet">
+        <section titleKey="tc_xrt_Preview">
+            <image source="thumbnail"/>
+        </section>
+        <section titleKey="tc_xrt_properties">
+            <property name="item_id" renderingHint="label"/>
+            <property name="item_revision_id" renderingHint="label"/>
+            <property name="object_name" renderingHint="label"/>
+            <property name="object_desc" renderingHint="label"/>
+            <property name="object_type"/>
+        </section>
+    </page>
+</rendering>

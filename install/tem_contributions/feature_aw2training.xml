@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Document   : feature_aw2training.xml
+    Description: This XML is used by TEM to install or upgrade the "aw2training" solution.
+-->
+<feature>
+    <name value="training"/>
+    <property name="feature_name" value="aw2training"/>
+    <group value="package"/>
+    <guid value="DFA11014F5FE29658F6EC96B6A11A809"/>
+    <bundle value="${feature_name}Bundle.xml"/>
+    <description value="${feature_name}.description"/>
+    <include file="dataModelDependency.xml"/>
+    <relation>
+        <depends name="aws2" value="EF6284519D32B8DADCF0F05213AF807B"/>
+    </relation>
+    <feature>
+        <!--  Feature: Data Model -->
+        <name value="Data Model"/>
+        <property name="feature_id" value="datamodel"/>
+        <property name="bmide_optional" value="false"/>
+        <property name="template_name" value="${feature_name}"/>
+        <property name="template_file" value="${template_name}_template.xml"/>
+        <root value="true"/>
+        <bundle value="${template_name}Bundle.xml"/>
+        <description value="${template_name}.description"/>
+        <guid value="50D1E434D15FFFEAA9A72243EAD218B9"/>
+        <include file="coreDataModel2.xml"/>
+        <include file="generatePlmxmlSchema.xml"/>
+    </feature>
+    <feature>
+        <!--   Feature: Runtime Server -->
+        <name value="Runtime Server"/>
+        <property name="feature_id" value="rtserver"/>
+        <property name="bmide_optional" value="true"/>
+        <bundle value="${feature_name}Bundle.xml"/>
+        <description value="${feature_name}.description"/>
+        <guid value="FC6112587534A465A2401631555E237A"/>
+        <!-- Set to true/false if there is an rtserver component   -->
+        <property name="template_rtserver" value="false"/>
+        <property name="rtserver_file" value="${feature_name}_rtserver.zip"/>
+        <files>
+            <code>
+                <unzip file="${rtserver_file}"/>
+            </code>
+        </files>
+        <install>
+            <code>
+                <textserver file="emh_text.xml" include="${feature_name}_errors.xml"/>
+                <textserver file="tc_text.xml" include="${feature_name}_text.xml"/>
+            </code>
+        </install>
+        <upgrade>
+            <code>
+                <textserver file="emh_text.xml" include="${feature_name}_errors.xml"/>
+                <textserver file="tc_text.xml" include="${feature_name}_text.xml"/>
+            </code>
+        </upgrade>
+    </feature>
+    <dependencyReferences>
+        <reference name="foundation" value="8C061DD51E13E0CB9DC4687B1A3348BE"/>
+    </dependencyReferences>
+</feature>

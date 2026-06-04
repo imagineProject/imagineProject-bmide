@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<import>
+  <Client abbreviation="AWClient" name="AWClient">
+    <ClientScope hostingClientName="" name="PpDocument" uri="PpDocument">
+      <ColumnConfig columnConfigId="PpDocument" sortBy="-1" sortDirection="">
+        <ColumnDef columnName="awp0Item_item_id" filterable="true" hidden="false" objectType="C9TestDocumentRevision" propertyName="awp0Item_item_id" width="150"/>
+        <ColumnDef columnName="object_name" filterable="true" hidden="false" objectType="C9TestDocumentRevision" propertyName="object_name" width="100"/>
+        <ColumnDef columnName="object_desc" filterable="true" hidden="false" objectType="C9TestDocumentRevision" propertyName="object_desc" width="100"/>
+      </ColumnConfig>
+    </ClientScope>
+  </Client>
+</import>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBusinessDataLocalization xmlns="http://teamcenter.com/BusinessModel/TcBusinessDataLocalization"
+    Date="">
+<Add>
+   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Five" status="Approved">Five</key>
+   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Four" status="Approved">Four</key>
+   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}One" status="Approved">One</key>
+   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Three" status="Approved">Three</key>
+   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Two" status="Approved">Two</key>
+   <key locale="en_US" id="Property{::}ItemRevision{::}aw2_CountNumber" status="Approved">Count Number</key>
+   <key locale="en_US" id="Property{::}ItemRevision{::}aw2_Number" status="Approved">Number</key>
+   <key locale="en_US" id="Property{::}Item{::}aw2Integer_1" status="Approved">Integer 1</key>
+   <key locale="en_US" id="Property{::}Item{::}aw2Integer_2" status="Approved">Integer 2</key>
+   <key locale="en_US" id="Property{::}Item{::}aw2Integer_3" status="Approved">Integer 3</key>
+</Add>
+</TcBusinessDataLocalization>
