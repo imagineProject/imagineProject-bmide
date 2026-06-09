@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+@<COPYRIGHT>@
+================================================================================
+Copyright 2023.
+Siemens Digital Industries Software.
+All Rights Reserved.
+================================================================================
+@<COPYRIGHT>@
+-->
+<media>
+    <product_id>Teamcenter</product_id>
+    <product_display_name>Teamcenter</product_display_name>
+    <application_id>aw2training</application_id>
+    <application_display_name>training</application_display_name>
+    <version>1.3</version>
+    <rtm_type>Main</rtm_type>
+    <parent_release/>
+    <platform>wntx64</platform>
+    <description>AW_Training</description>
+    <application_dependency>
+        <application id="Foundation" release="2506.0008"/>
+    </application_dependency>
+    <admin_data_present>true</admin_data_present>
+</media>

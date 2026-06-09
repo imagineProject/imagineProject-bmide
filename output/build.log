@@ -1,0 +1,31 @@
+Log file created on on 06-08-2026 10:01 PM
+_______________________________________________________________________________
+
+
+
+_______________________________________________________________________________
+The Data Model for aw2training is up-to-date.
+_______________________________________________________________________________
+Obtaining Build Information...
+The library AW2SoaTraining does not have a service opertions defined. Code will not be generated for this library.
+_______________________________________________________________________________
+Updating The Build Files For aw2training...   
+Creating the build file C:\Siemens\Teamcenter2506\teamcenter_root\bmide\workspace\2506000.0.0\aw2training\build\targets.xml.
+Creating the build file C:\Siemens\Teamcenter2506\teamcenter_root\bmide\workspace\2506000.0.0\aw2training\build\AW2Training\makefile.
+_______________________________________________________________________________
+_______________________________________________________________________________
+Generating Source Files... 
+_______________________________________________________________________________
+Generating code for business objects defined in AW2Training
+C:\Siemens\Teamcenter2506\teamcenter_root\bmide\workspace\2506000.0.0\aw2training\output\generated
+C:\Siemens\Teamcenter2506\teamcenter_root\bmide\workspace\2506000.0.0\aw2training\src\server
+_______________________________________________________________________________
+_______________________________________________________________________________
+Generating textserver files.
+C:\Siemens\Teamcenter2506\teamcenter_root\bmide\workspace\2506000.0.0\aw2training\src\server\textserver
+_______________________________________________________________________________
+_______________________________________________________________________________
+The CDT Nature is up-to-date.
+_______________________________________________________________________________
+Code generation complete.
+_______________________________________________________________________________

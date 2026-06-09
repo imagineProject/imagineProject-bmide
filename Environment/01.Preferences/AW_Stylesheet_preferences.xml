@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences version="10.0">
+  <category name="C9.XMLRendering">
+    <category_description></category_description>
+    
+    <preference name="AWC_Schedule.CREATERENDERING" type="String"
+      array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Cust Document Create
+      </preference_description>
+      <context name="Teamcenter">
+        <value>EGTechScheduleCreate</value>
+      </context>
+    </preference>
+  
+    
+  </category>
+</preferences>

@@ -1,0 +1,15 @@
+{
+  "appId": "aw2training",
+  "attributes": {
+    "visible": true
+  },
+  "requireDependencies": [
+    "fnd0_foundation",
+    "aws2"
+  ],
+  "supportedArtifacts": [
+    "fnd0_dataModelArtifact",
+    "fnd0_adminDataArtifact",
+    "fnd0_serverArtifact"
+  ]
+}

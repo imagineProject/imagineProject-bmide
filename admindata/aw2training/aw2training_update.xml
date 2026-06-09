@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+@<COPYRIGHT>@
+================================================================================
+Copyright 2024.
+Siemens Digital Industries Software.
+All Rights Reserved.
+================================================================================
+@<COPYRIGHT>@
+
+#Steps for updating admin data for your solution.
+-->
+<update_default_script>
+   
+ <section name="post-non-schema-add" description="Use this section to add any commands that should migrate data after the BMIDE tools have added the Business Objects, Business Rules, LOVs, Change objects, Validation Data, Tools, etc."/>
+   
+</update_default_script>

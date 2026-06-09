@@ -1,0 +1,3 @@
+AW2TestDocumentCreate, .\AW2TestDocumentCreate.xml
+AW2TestPage, .\AW2TestPage.xml
+EGTechScheduleCreate, .\EGTechScheduleCreate.xml

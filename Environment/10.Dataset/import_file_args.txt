@@ -1,0 +1,3 @@
+-f=.\SE_Legend_Configuration.xml -d=ArchitectureModelerLegend  -type=Ase0XML -ref=Ase0XMLFile -de=r
+-f=.\FMEACreateVariantRules.xml -d=FMEACreateVariantRule  -type=Text -ref=Text -de=r
+-f=.\CompareFMEAStructureRules.xml -d=CompareFMEAStructureRules  -type=Text -ref=Text -de=r
