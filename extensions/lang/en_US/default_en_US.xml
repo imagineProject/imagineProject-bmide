@@ -2,15 +2,44 @@
 <TcBusinessDataLocalization xmlns="http://teamcenter.com/BusinessModel/TcBusinessDataLocalization"
     Date="">
 <Add>
-   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Five" status="Approved">Five</key>
-   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Four" status="Approved">Four</key>
-   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}One" status="Approved">One</key>
-   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Three" status="Approved">Three</key>
-   <key locale="en_US" id="LOVValue{::}AW2_CountNumber_LOV{::}Two" status="Approved">Two</key>
-   <key locale="en_US" id="Property{::}ItemRevision{::}aw2_CountNumber" status="Approved">Count Number</key>
-   <key locale="en_US" id="Property{::}ItemRevision{::}aw2_Number" status="Approved">Number</key>
-   <key locale="en_US" id="Property{::}Item{::}aw2Integer_1" status="Approved">Integer 1</key>
-   <key locale="en_US" id="Property{::}Item{::}aw2Integer_2" status="Approved">Integer 2</key>
-   <key locale="en_US" id="Property{::}Item{::}aw2Integer_3" status="Approved">Integer 3</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItem2MasterS" status="Approved">Test Item2 Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItem2Master" status="Approved">Test Item2 Master</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItem2RevMasterS" status="Approved">Test Item2 Revision Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItem2RevisionMaster" status="Approved">Test Item2 Revision Master</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItem2Revision" status="Approved">Test Item2 Revision</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItem2" status="Approved">Test Item2</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItemMasterS" status="Approved">Test Item Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItemMaster" status="Approved">Test Item Master</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItemRevMasterS" status="Approved">Test Item Revision Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItemRevisionMaster" status="Approved">Test Item Revision Master</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItemRevision" status="Approved">Test Item Revision</key>
+   <key locale="en_US" id="BusinessObject{::}AW2_TestItem" status="Approved">Test Item</key>
+   <key locale="en_US" id="LOVValue{::}AW2_MaterialTypeLOV{::}Aluminum" status="Approved">Aluminum</key>
+   <key locale="en_US" id="LOVValue{::}AW2_MaterialTypeLOV{::}Paper" status="Approved">Paper</key>
+   <key locale="en_US" id="LOVValue{::}AW2_MaterialTypeLOV{::}Plastic" status="Approved">Plastic</key>
+   <key locale="en_US" id="LOVValue{::}AW2_MaterialTypeLOV{::}Steel" status="Approved">Steel</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectDivision{::}A" status="Approved">A</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectDivision{::}B" status="Approved">B</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectDivision{::}C" status="Approved">C</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectDivision{::}D" status="Approved">D</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectStatus{::}Bad" status="Approved">Bad</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectStatus{::}Excellent" status="Approved">Excellent</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectStatus{::}Good" status="Approved">Good</key>
+   <key locale="en_US" id="LOVValue{::}AW2_ProjectStatus{::}Normal" status="Approved">Normal</key>
+   <key locale="en_US" id="Property{::}AW2_TestItem2{::}aw2_test1" status="Approved">test1</key>
+   <key locale="en_US" id="Property{::}AW2_TestItem2{::}aw2_test2" status="Approved">test2</key>
+   <key locale="en_US" id="Property{::}AW2_TestItemRevision{::}aw2_approver" status="Approved">approver</key>
+   <key locale="en_US" id="Property{::}AW2_TestItemRevision{::}aw2_date" status="Approved">date</key>
+   <key locale="en_US" id="Property{::}AW2_TestItemRevision{::}aw2_is_approve" status="Approved">is approve</key>
+   <key locale="en_US" id="Property{::}AW2_TestItemRevision{::}aw2_material_type"
+       status="Approved">material type</key>
+   <key locale="en_US" id="Property{::}AW2_TestItemRevision{::}aw2_status" status="Approved">status</key>
+   <key locale="en_US" id="Property{::}AW2_TestItem{::}aw2_testRuntime" status="Approved">test Runtime</key>
+   <key locale="en_US" id="Property{::}AW2_TestItem{::}aw2_testper1" status="Approved">testper1</key>
+   <key locale="en_US" id="Property{::}AW2_TestItem{::}aw2_testper2" status="Approved">testper2</key>
+   <key locale="en_US" id="Property{::}ScheduleTask{::}aw2_Status" status="Approved">Status</key>
+   <key locale="en_US" id="Property{::}Schedule{::}aw2_PM" status="Approved">PM</key>
+   <key locale="en_US" id="Property{::}Schedule{::}aw2_ProjectDivision" status="Approved">Project Division</key>
+   <key locale="en_US" id="Property{::}Schedule{::}aw2_useTemplate" status="Approved">useTemplate</key>
 </Add>
 </TcBusinessDataLocalization>

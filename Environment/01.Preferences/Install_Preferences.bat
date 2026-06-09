@@ -1,8 +1,8 @@
 @echo off
 
 SET INFOPWD=infodba
-SET TC_ROOT=C:\Siemens\TC
-SET TC_DATA=C:\Siemens\tc_data
+SET TC_ROOT=C:\Siemens\Teamcenter2506\teamcenter_root
+SET TC_DATA=C:\Siemens\Teamcenter2506\tc_data
 call %TC_DATA%\tc_profilevars
 
 echo ##### import AW Stylesheet Preferences  #####

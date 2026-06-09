@@ -1,4 +1,3 @@
-C9TestDocumentCreate, .\C9TestDocumentCreate.xml
-C9TestDocumentRevSummary, .\C9TestDocumentRevSummary.xml
-C9TestDocumentRevSubSummary, .\C9TestDocumentRevSubSummary.xml
-C9TestDocumentRevInfoSummary, .\C9TestDocumentRevInfoSummary.xml
+AW2TestDocumentCreate, .\AW2TestDocumentCreate.xml
+AW2TestPage, .\AW2TestPage.xml
+EGTechScheduleCreate, .\EGTechScheduleCreate.xml

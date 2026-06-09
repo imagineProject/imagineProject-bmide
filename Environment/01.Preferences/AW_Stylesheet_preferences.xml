@@ -3,23 +3,15 @@
   <category name="C9.XMLRendering">
     <category_description></category_description>
     
-    <preference name="AWC_C9CustDocumentRevision.SUMMARYRENDERING" type="String"
-      array="false" disabled="false" protectionScope="Site" envEnabled="false">
-      <preference_description>Cust Document Summary
-      </preference_description>
-      <context name="Teamcenter">
-        <value>AWC_C9CustDocumentRevisionSummary</value>
-      </context>
-    </preference>
-	
-    <preference name="AWC_C9CustDocument.CREATERENDERING" type="String"
+    <preference name="AWC_Schedule.CREATERENDERING" type="String"
       array="false" disabled="false" protectionScope="Site" envEnabled="false">
       <preference_description>Cust Document Create
       </preference_description>
       <context name="Teamcenter">
-        <value>AWC_C9CustDocumentCreate</value>
+        <value>EGTechScheduleCreate</value>
       </context>
     </preference>
   
+    
   </category>
 </preferences>

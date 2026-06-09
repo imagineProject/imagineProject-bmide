@@ -1,159 +1,443 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TcBusinessData xmlns="http://teamcenter.com/BusinessModel/TcBusinessData" Date="">
 <Add>
-   <Library name="AW2Runtime" createRelease="tc2412" serviceLibrary="false" namespace=""
-       isThirdParty="false" description="AW2Runtime">
+   <Library name="AW2SoaTraining" createRelease="tc2412" serviceLibrary="true" namespace="AW2::Soa::Training"
+       isThirdParty="false">
+     <DependentOn name="AW2Training"/>
+   </Library>
+   <Library name="AW2Training" createRelease="tc2412" serviceLibrary="false" namespace=""
+       isThirdParty="false">
      <DependentOn name="metaframework"/>
      <DependentOn name="sa"/>
      <DependentOn name="tccore"/>
      <DependentOn name="tc"/>
      <DependentOn name="cxpom"/>
-     <DependentOn name="grm"/>
-     <DependentOn name="ae"/>
-     <DependentOn name="ce"/>
    </Library>
-   <Library name="AW2SoaPp" createRelease="tc2412" serviceLibrary="true" namespace="AW2::Soa::Pp"
-       isThirdParty="false"/>
-   <Library name="AW2SoaTT" createRelease="tc2412" serviceLibrary="true" namespace="AW2::Soa::TT"
-       isThirdParty="false"/>
-   <ServiceInterface name="GetObjectName" namespace="AW2::Soa::Pp" libraryName="AW2SoaPp"
-       serviceLibraryRef="" dependencies="" createRelease="tc2412" description="GetObjectName"/>
-   <ServiceInterface name="GetItemName" namespace="AW2::Soa::TT" libraryName="AW2SoaTT"
-       serviceLibraryRef="" dependencies="" createRelease="tc2412" description="GetItemName"/>
-   <TcAttributeAttach className="Item">
-     <TcAttribute attributeName="aw2Integer_1" description="" attributeType="POM_int"
+   <ServiceInterface name="AW2SoaTraining" namespace="AW2::Soa::Training" libraryName="AW2SoaTraining"
+       serviceLibraryRef="" dependencies="" createRelease="tc2412" description="soa training"/>
+   <Struct name="RestInfo" createRelease="tc2412" scope="AW2::Soa::Training::AW2SoaTraining"
+       namespace="AW2::Soa::Training::_2024_12::AW2SoaTraining" isPublished="true"
+       description="test">
+     <StructElement name="restParam" description="Test Rest Param">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+     <StructElement name="restService" description="test Service">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+     <StructElement name="useUrl" description="test useUrl">
+       <DataTypeRefParam dataType="std::string"/>
+     </StructElement>
+   </Struct>
+   <TcClass className="AW2_TestItem" parentClassName="Item" isExportable="false" isUninstantiable="false"
+       isUninheritable="false" description="">
+     <TcAttribute attributeName="aw2_testper1" description="" attributeType="POM_int"
          maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
          isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
-         isTransient="false" exportAsString="false" noBackpointer="false" initialValue="NULL"
-         lowerBoundValue="" upperBoundValue=""/>
-     <TcAttribute attributeName="aw2Integer_2" description="" attributeType="POM_int"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+     <TcAttribute attributeName="aw2_testper2" description="" attributeType="POM_int"
          maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
          isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
-         isTransient="false" exportAsString="false" noBackpointer="false" initialValue="NULL"
-         lowerBoundValue="" upperBoundValue=""/>
-   </TcAttributeAttach>
-   <TcAttributeAttach className="ItemRevision">
-     <TcAttribute attributeName="aw2_CountNumber" description="" attributeType="POM_string"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+   </TcClass>
+   <TcClass className="AW2_TestItem2" parentClassName="Item" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description="">
+     <TcAttribute attributeName="aw2_test1" description="" attributeType="POM_string"
          maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
          isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
          isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
          upperBoundValue=""/>
-     <TcAttribute attributeName="aw2_Number" description="" attributeType="POM_int"
+     <TcAttribute attributeName="aw2_test2" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+   </TcClass>
+   <TcClass className="AW2_TestItem2MasterS" parentClassName="ItemMaster" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="AW2_TestItem2RevMasterS" parentClassName="ItemVersionMaster"
+       isExportable="false" isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="AW2_TestItem2Revision" parentClassName="ItemRevision" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="AW2_TestItemMasterS" parentClassName="ItemMaster" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="AW2_TestItemRevMasterS" parentClassName="ItemVersionMaster"
+       isExportable="false" isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="AW2_TestItemRevision" parentClassName="ItemRevision" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description="">
+     <TcAttribute attributeName="aw2_status" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" initialValue=""
+         lowerBoundValue="" upperBoundValue=""/>
+     <TcAttribute attributeName="aw2_material_type" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+     <TcAttribute attributeName="aw2_date" description="" attributeType="POM_date"
          maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
          isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
          isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
          upperBoundValue=""/>
+     <TcAttribute attributeName="aw2_is_approve" description="" attributeType="POM_logical"
+         maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" initialValue="false"/>
+     <TcAttribute attributeName="aw2_approver" description="" attributeType="POM_typed_reference"
+         maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" typedRefClassName="User"/>
+   </TcClass>
+   <TcAttributeAttach className="Schedule">
+     <TcAttribute attributeName="aw2_PM" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+     <TcAttribute attributeName="aw2_ProjectDivision" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+     <TcAttribute attributeName="aw2_useTemplate" description="" attributeType="POM_logical"
+         maxStringLength="0" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false"/>
    </TcAttributeAttach>
-   <OperationTemplate id="std::string#AW2::Soa::Pp::GetObjectName::getDocumentName#const,std::string,&amp;"
-       name="AW2::Soa::Pp::GetObjectName::getDocumentName" returnConst="false" createRelease="tc2412"
-       description="" const="false" static="false" returnFreeMemory="false" returnDescription="">
-     <OperationReturnDataTypeRef dataType="std::string" qualifier=""/>
-     <OperationParameter name="documentUid" description="Document Uid" const="true"
-         inputOutput="Input" freeOutputMemory="false" defaultValue="">
-       <OperationParameterDataTypeRef dataType="std::string" qualifier="&amp;"/>
-     </OperationParameter>
-   </OperationTemplate>
-   <OperationTemplate id="std::string#AW2::Soa::TT::GetItemName::getItemStringName#const,std::string,&amp;"
-       name="AW2::Soa::TT::GetItemName::getItemStringName" returnConst="false" createRelease="tc2412"
-       description="" const="false" static="false" returnFreeMemory="false" returnDescription="">
-     <OperationReturnDataTypeRef dataType="std::string" qualifier=""/>
-     <OperationParameter name="itemId" description="ItemId" const="true" inputOutput="Input"
-         freeOutputMemory="false" defaultValue="">
-       <OperationParameterDataTypeRef dataType="std::string" qualifier="&amp;"/>
-     </OperationParameter>
-   </OperationTemplate>
-   <BusinessObjectInterface name="Item" namespace="aw2::aw2training" libraryName="AW2Runtime"
-       createRelease="tc2412" typeName="Item" primaryInterface="false" description="Interface Name for Business Object Item"/>
-   <Operation id="getItemStringName#const,std::string,&amp;" name="getItemStringName"
-       createRelease="tc2412" description="" opTemplate="std::string#AW2::Soa::TT::GetItemName::getItemStringName#const,std::string,&amp;"
-       interface="AW2::Soa::TT::GetItemName" isPublished="true" canOverride="false"
-       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
-       returnDescription="" component="" useCase="" dependencies="" exceptionCondition="">
-     <ParameterInfo parameterName="itemId" description="ItemId"/>
-   </Operation>
-   <Operation id="getDocumentName#const,std::string,&amp;" name="getDocumentName"
-       createRelease="tc2412" description="" opTemplate="std::string#AW2::Soa::Pp::GetObjectName::getDocumentName#const,std::string,&amp;"
-       interface="AW2::Soa::Pp::GetObjectName" isPublished="true" canOverride="false"
-       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
-       returnDescription="" component="" useCase="" dependencies="" exceptionCondition="">
-     <ParameterInfo parameterName="documentUid" description="Document Uid"/>
-   </Operation>
-   <PropertyOperation id="getAw2Integer_3#int,&amp;$bool,&amp;$bool,&amp;" name="getAw2Integer_3"
-       createRelease="tc2412" description="Getter for an Integer Property" propertyName="aw2Integer_3"
-       operationType="Getter" opTemplate="int#get#int,&amp;$bool,&amp;$bool,&amp;"
-       interface="aw2::aw2training::Item" isPublished="true" canOverride="true" isPreActionAllowed="false"
-       isPostActionAllowed="false" isPreConditionAllowed="false" returnDescription="Status. 0 if successful"/>
-   <TcPropertyAttach typeName="Item">
-     <TcProperty propName="aw2Integer_3" propTypeName="Runtime" propValueType="PROP_int"
+   <TcAttributeAttach className="ScheduleTask">
+     <TcAttribute attributeName="aw2_Status" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+   </TcAttributeAttach>
+   <OperationInputType typeName="AW2_TestItem2CreI" parentTypeName="ItemCreI" typeClassName="AW2_TestItem2CreI"
+       description="CreateInput object for &quot;AW2_TestItem2&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2CreI">
+     <OperationInputProperty propName="aw2_test1" compoundObjectConstant="" srcPropName="aw2_test1"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+     <OperationInputProperty propName="aw2_test2" compoundObjectConstant="" srcPropName="aw2_test2"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </OperationInputType>
+   <OperationInputType typeName="AW2_TestItem2MasterCreI" parentTypeName="Item MasterCreI"
+       typeClassName="AW2_TestItem2MasterCreI" description="CreateInput object for &quot;AW2_TestItem2Master&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2MasterCreI"/>
+   <OperationInputType typeName="AW2_TestItem2MasterSCreI" parentTypeName="ItemMasterCreI"
+       typeClassName="AW2_TestItem2MasterSCreI" description="CreateInput object for &quot;AW2_TestItem2MasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2MasterSCreI"/>
+   <OperationInputType typeName="AW2_TestItem2MasterSSvAI" parentTypeName="ItemMasterSvAI"
+       typeClassName="AW2_TestItem2MasterSSvAI" description="SaveAsInput object for &quot;AW2_TestItem2MasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2MasterSSvAI"/>
+   <OperationInputType typeName="AW2_TestItem2MasterSvAI" parentTypeName="Item MasterSvAI"
+       typeClassName="AW2_TestItem2MasterSvAI" description="SaveAsInput object for &quot;AW2_TestItem2Master&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2MasterSvAI"/>
+   <OperationInputType typeName="AW2_TestItem2RevMasterSCreI" parentTypeName="ItemVersionMasterCreI"
+       typeClassName="AW2_TestItem2RevMasterSCreI" description="CreateInput object for &quot;AW2_TestItem2RevMasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevMasterSCreI"/>
+   <OperationInputType typeName="AW2_TestItem2RevMasterSSvAI" parentTypeName="ItemVersionMasterSvAI"
+       typeClassName="AW2_TestItem2RevMasterSSvAI" description="SaveAsInput object for &quot;AW2_TestItem2RevMasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevMasterSSvAI"/>
+   <OperationInputType typeName="AW2_TestItem2RevisionCreI" parentTypeName="ItemRevisionCreI"
+       typeClassName="AW2_TestItem2RevisionCreI" description="CreateInput object for &quot;AW2_TestItem2Revision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevisionCreI"/>
+   <OperationInputType typeName="AW2_TestItem2RevisionM_alt0CreI" parentTypeName="ItemRevision MasterCreI"
+       typeClassName="AW2_TestItem2RevisionM_alt0CreI" description="CreateInput object for &quot;AW2_TestItem2RevisionMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevisionM_alt0CreI"/>
+   <OperationInputType typeName="AW2_TestItem2RevisionM_alt0SvAI" parentTypeName="ItemRevision MasterSvAI"
+       typeClassName="AW2_TestItem2RevisionM_alt0SvAI" description="SaveAsInput object for &quot;AW2_TestItem2RevisionMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevisionM_alt0SvAI"/>
+   <OperationInputType typeName="AW2_TestItem2RevisionRevI" parentTypeName="ItemRevisionRevI"
+       typeClassName="AW2_TestItem2RevisionRevI" description="ReviseInput object for &quot;AW2_TestItem2Revision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevisionRevI"/>
+   <OperationInputType typeName="AW2_TestItem2RevisionSvAI" parentTypeName="ItemRevisionSvAI"
+       typeClassName="AW2_TestItem2RevisionSvAI" description="SaveAsInput object for &quot;AW2_TestItem2Revision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevisionSvAI"/>
+   <OperationInputType typeName="AW2_TestItem2SvAI" parentTypeName="ItemSvAI" typeClassName="AW2_TestItem2SvAI"
+       description="SaveAsInput object for &quot;AW2_TestItem2&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2SvAI"/>
+   <OperationInputType typeName="AW2_TestItemCreI" parentTypeName="ItemCreI" typeClassName="AW2_TestItemCreI"
+       description="CreateInput object for &quot;AW2_TestItem&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemCreI">
+     <OperationInputProperty propName="aw2_testper1" compoundObjectConstant="" srcPropName="aw2_testper1"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+     <OperationInputProperty propName="aw2_testper2" compoundObjectConstant="" srcPropName="aw2_testper2"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+     <OperationInputProperty propName="aw2_testRuntime" compoundObjectConstant=""
+         srcPropName="aw2_testRuntime" compoundObjectType="" fieldType="SimpleProperty"
+         description=""/>
+   </OperationInputType>
+   <OperationInputType typeName="AW2_TestItemMasterCreI" parentTypeName="Item MasterCreI"
+       typeClassName="AW2_TestItemMasterCreI" description="CreateInput object for &quot;AW2_TestItemMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemMasterCreI"/>
+   <OperationInputType typeName="AW2_TestItemMasterSCreI" parentTypeName="ItemMasterCreI"
+       typeClassName="AW2_TestItemMasterSCreI" description="CreateInput object for &quot;AW2_TestItemMasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemMasterSCreI"/>
+   <OperationInputType typeName="AW2_TestItemMasterSSvAI" parentTypeName="ItemMasterSvAI"
+       typeClassName="AW2_TestItemMasterSSvAI" description="SaveAsInput object for &quot;AW2_TestItemMasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemMasterSSvAI"/>
+   <OperationInputType typeName="AW2_TestItemMasterSvAI" parentTypeName="Item MasterSvAI"
+       typeClassName="AW2_TestItemMasterSvAI" description="SaveAsInput object for &quot;AW2_TestItemMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemMasterSvAI"/>
+   <OperationInputType typeName="AW2_TestItemRevMasterSCreI" parentTypeName="ItemVersionMasterCreI"
+       typeClassName="AW2_TestItemRevMasterSCreI" description="CreateInput object for &quot;AW2_TestItemRevMasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevMasterSCreI"/>
+   <OperationInputType typeName="AW2_TestItemRevMasterSSvAI" parentTypeName="ItemVersionMasterSvAI"
+       typeClassName="AW2_TestItemRevMasterSSvAI" description="SaveAsInput object for &quot;AW2_TestItemRevMasterS&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevMasterSSvAI"/>
+   <OperationInputType typeName="AW2_TestItemRevisionCreI" parentTypeName="ItemRevisionCreI"
+       typeClassName="AW2_TestItemRevisionCreI" description="CreateInput object for &quot;AW2_TestItemRevision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevisionCreI">
+     <OperationInputProperty propName="aw2_status" compoundObjectConstant="" srcPropName="aw2_status"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+     <OperationInputProperty propName="aw2_material_type" compoundObjectConstant=""
+         srcPropName="aw2_material_type" compoundObjectType="" fieldType="SimpleProperty"
+         description=""/>
+     <OperationInputProperty propName="aw2_date" compoundObjectConstant="" srcPropName="aw2_date"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+     <OperationInputProperty propName="aw2_is_approve" compoundObjectConstant="" srcPropName="aw2_is_approve"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+     <OperationInputProperty propName="aw2_approver" compoundObjectConstant="" srcPropName="aw2_approver"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </OperationInputType>
+   <OperationInputType typeName="AW2_TestItemRevisionMasterCreI" parentTypeName="ItemRevision MasterCreI"
+       typeClassName="AW2_TestItemRevisionMasterCreI" description="CreateInput object for &quot;AW2_TestItemRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevisionMasterCreI"/>
+   <OperationInputType typeName="AW2_TestItemRevisionMasterSvAI" parentTypeName="ItemRevision MasterSvAI"
+       typeClassName="AW2_TestItemRevisionMasterSvAI" description="SaveAsInput object for &quot;AW2_TestItemRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevisionMasterSvAI"/>
+   <OperationInputType typeName="AW2_TestItemRevisionRevI" parentTypeName="ItemRevisionRevI"
+       typeClassName="AW2_TestItemRevisionRevI" description="ReviseInput object for &quot;AW2_TestItemRevision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevisionRevI"/>
+   <OperationInputType typeName="AW2_TestItemRevisionSvAI" parentTypeName="ItemRevisionSvAI"
+       typeClassName="AW2_TestItemRevisionSvAI" description="SaveAsInput object for &quot;AW2_TestItemRevision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevisionSvAI"/>
+   <OperationInputType typeName="AW2_TestItemSvAI" parentTypeName="ItemSvAI" typeClassName="AW2_TestItemSvAI"
+       description="SaveAsInput object for &quot;AW2_TestItem&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemSvAI"/>
+   <TcForm typeName="AW2_TestItem2Master" parentTypeName="Item Master" typeClassName="Form"
+       description="MasterForm object for &quot;AW2_TestItem2&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2Master" functionality="AW2training"
+       formStorageClassName="AW2_TestItem2MasterS"/>
+   <TcForm typeName="AW2_TestItem2RevisionMaster" parentTypeName="ItemRevision Master"
+       typeClassName="Form" description="MasterForm object for &quot;AW2_TestItem2Revision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevisionMaster" functionality="AW2training"
+       formStorageClassName="AW2_TestItem2RevMasterS"/>
+   <TcForm typeName="AW2_TestItemMaster" parentTypeName="Item Master" typeClassName="Form"
+       description="MasterForm object for &quot;AW2_TestItem&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemMaster" functionality="AW2training"
+       formStorageClassName="AW2_TestItemMasterS"/>
+   <TcForm typeName="AW2_TestItemRevisionMaster" parentTypeName="ItemRevision Master"
+       typeClassName="Form" description="MasterForm object for &quot;AW2_TestItemRevision&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevisionMaster" functionality="AW2training"
+       formStorageClassName="AW2_TestItemRevMasterS"/>
+   <TcStandardType typeName="AW2_TestItem" parentTypeName="Item" typeClassName="AW2_TestItem"
+       description="" isAbstract="false" artifactName="AW2_TestItem" functionality="AW2training">
+     <TcProperty propName="aw2_testRuntime" propTypeName="Runtime" propValueType="PROP_int"
          propMaxStringLength="0" isArray="false" arrayLength="0" description="" referencedTypeConstant=""
          referencedType="" fnd0ReferencingAttrName=""/>
-   </TcPropertyAttach>
-   <TcPropertyAttach typeName="ItemCreI">
-     <OperationInputProperty propName="aw2Integer_1" compoundObjectConstant="" srcPropName="aw2Integer_1"
+   </TcStandardType>
+   <TcStandardType typeName="AW2_TestItem2" parentTypeName="Item" typeClassName="AW2_TestItem2"
+       description="" isAbstract="false" artifactName="AW2_TestItem2" functionality="AW2training"/>
+   <TcStandardType typeName="AW2_TestItem2MasterS" parentTypeName="ItemMaster" typeClassName="AW2_TestItem2MasterS"
+       description="Form Storage object for &quot;AW2_TestItem2Master&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2MasterS" functionality="AW2training"/>
+   <TcStandardType typeName="AW2_TestItem2RevMasterS" parentTypeName="ItemVersionMaster"
+       typeClassName="AW2_TestItem2RevMasterS" description="Form Storage object for &quot;AW2_TestItem2RevMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItem2RevMasterS" functionality="AW2training"/>
+   <TcStandardType typeName="AW2_TestItem2Revision" parentTypeName="ItemRevision"
+       typeClassName="AW2_TestItem2Revision" description="ItemRevision object for &quot;AW2_TestItem2&quot;  business object"
+       isAbstract="false" artifactName="AW2_TestItem2Revision" functionality="AW2training"/>
+   <TcStandardType typeName="AW2_TestItemMasterS" parentTypeName="ItemMaster" typeClassName="AW2_TestItemMasterS"
+       description="Form Storage object for &quot;AW2_TestItemMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemMasterS" functionality="AW2training"/>
+   <TcStandardType typeName="AW2_TestItemRevMasterS" parentTypeName="ItemVersionMaster"
+       typeClassName="AW2_TestItemRevMasterS" description="Form Storage object for &quot;AW2_TestItemRevMaster&quot; business object"
+       isAbstract="false" artifactName="AW2_TestItemRevMasterS" functionality="AW2training"/>
+   <TcStandardType typeName="AW2_TestItemRevision" parentTypeName="ItemRevision" typeClassName="AW2_TestItemRevision"
+       description="ItemRevision object for &quot;AW2_TestItem&quot;  business object"
+       isAbstract="false" artifactName="AW2_TestItemRevision" functionality="AW2training"/>
+   <BusinessObjectInterface name="AW2_TestItem" namespace="aw2training" libraryName="AW2Training"
+       createRelease="tc2412" typeName="AW2_TestItem" primaryInterface="true" description="Interface Name for Business Object AW2_TestItem"/>
+   <PropertyOperation id="getAw2_testRuntime#int,&amp;$bool,&amp;$bool,&amp;" name="getAw2_testRuntime"
+       createRelease="tc2412" description="Getter for an Integer Property" propertyName="aw2_testRuntime"
+       operationType="Getter" opTemplate="int#get#int,&amp;$bool,&amp;$bool,&amp;"
+       interface="aw2training::AW2_TestItem" isPublished="true" canOverride="true"
+       isPreActionAllowed="false" isPostActionAllowed="false" isPreConditionAllowed="false"
+       returnDescription="Status. 0 if successful"/>
+   <TcPropertyAttach typeName="ScheduleCreI">
+     <OperationInputProperty propName="aw2_PM" compoundObjectConstant="" srcPropName="aw2_PM"
          compoundObjectType="" fieldType="SimpleProperty" description=""/>
    </TcPropertyAttach>
-   <TcPropertyAttach typeName="ItemCreI">
-     <OperationInputProperty propName="aw2Integer_2" compoundObjectConstant="" srcPropName="aw2Integer_2"
-         compoundObjectType="" fieldType="SimpleProperty" description=""/>
-   </TcPropertyAttach>
-   <TcPropertyAttach typeName="ItemCreI">
-     <OperationInputProperty propName="aw2Integer_3" compoundObjectConstant="" srcPropName="aw2Integer_3"
-         compoundObjectType="" fieldType="SimpleProperty" description=""/>
-   </TcPropertyAttach>
-   <TcPropertyAttach typeName="ItemRevisionCreI">
-     <OperationInputProperty propName="aw2_CountNumber" compoundObjectConstant=""
-         srcPropName="aw2_CountNumber" compoundObjectType="" fieldType="SimpleProperty"
+   <TcPropertyAttach typeName="ScheduleCreI">
+     <OperationInputProperty propName="aw2_ProjectDivision" compoundObjectConstant=""
+         srcPropName="aw2_ProjectDivision" compoundObjectType="" fieldType="SimpleProperty"
          description=""/>
    </TcPropertyAttach>
-   <TcPropertyAttach typeName="ItemRevisionCreI">
-     <OperationInputProperty propName="aw2_Number" compoundObjectConstant="" srcPropName="aw2_Number"
+   <TcPropertyAttach typeName="ScheduleCreI">
+     <OperationInputProperty propName="aw2_useTemplate" compoundObjectConstant=""
+         srcPropName="aw2_useTemplate" compoundObjectType="" fieldType="SimpleProperty"
+         description=""/>
+   </TcPropertyAttach>
+   <TcPropertyAttach typeName="ScheduleTaskCreI">
+     <OperationInputProperty propName="aw2_Status" compoundObjectConstant="" srcPropName="aw2_Status"
          compoundObjectType="" fieldType="SimpleProperty" description=""/>
    </TcPropertyAttach>
-   <TcPropertyConstantAttach constantName="Enabled" typeName="Item" propertyName="aw2Integer_1"
+   <TcGlobalConstantAttach constantName="Fnd0SelectedLocales" value="en_US,ko_KR"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItem" value="AW2_TestItemCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItem2" value="AW2_TestItem2CreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItem2Master"
+       value="AW2_TestItem2MasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItem2MasterS"
+       value="AW2_TestItem2MasterSCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItem2Revision"
+       value="AW2_TestItem2RevisionCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItem2RevisionMaster"
+       value="AW2_TestItem2RevisionM_alt0CreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItem2RevMasterS"
+       value="AW2_TestItem2RevMasterSCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItemMaster"
+       value="AW2_TestItemMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItemMasterS"
+       value="AW2_TestItemMasterSCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItemRevision"
+       value="AW2_TestItemRevisionCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItemRevisionMaster"
+       value="AW2_TestItemRevisionMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="AW2_TestItemRevMasterS"
+       value="AW2_TestItemRevMasterSCreI"/>
+   <TcTypeConstantAttach constantName="ItemRevision" typeName="AW2_TestItem" value="AW2_TestItemRevision"/>
+   <TcTypeConstantAttach constantName="ItemRevision" typeName="AW2_TestItem2" value="AW2_TestItem2Revision"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="AW2_TestItem" value="AW2_TestItemMaster"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="AW2_TestItem2" value="AW2_TestItem2Master"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="AW2_TestItem2Revision"
+       value="AW2_TestItem2RevisionMaster"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="AW2_TestItemRevision"
+       value="AW2_TestItemRevisionMaster"/>
+   <TcTypeConstantAttach constantName="ReviseInput" typeName="AW2_TestItem2Revision"
+       value="AW2_TestItem2RevisionRevI"/>
+   <TcTypeConstantAttach constantName="ReviseInput" typeName="AW2_TestItemRevision"
+       value="AW2_TestItemRevisionRevI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItem" value="AW2_TestItemSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItem2" value="AW2_TestItem2SvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItem2Master"
+       value="AW2_TestItem2MasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItem2MasterS"
+       value="AW2_TestItem2MasterSSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItem2Revision"
+       value="AW2_TestItem2RevisionSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItem2RevisionMaster"
+       value="AW2_TestItem2RevisionM_alt0SvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItem2RevMasterS"
+       value="AW2_TestItem2RevMasterSSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItemMaster"
+       value="AW2_TestItemMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItemMasterS"
+       value="AW2_TestItemMasterSSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItemRevision"
+       value="AW2_TestItemRevisionSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItemRevisionMaster"
+       value="AW2_TestItemRevisionMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="AW2_TestItemRevMasterS"
+       value="AW2_TestItemRevMasterSSvAI"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItem2" propertyName="aw2_test1"
        value="true"/>
-   <TcPropertyConstantAttach constantName="Enabled" typeName="Item" propertyName="aw2Integer_2"
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItem2" propertyName="aw2_test2"
        value="true"/>
-   <TcPropertyConstantAttach constantName="Enabled" typeName="Item" propertyName="aw2Integer_3"
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItem" propertyName="aw2_testper1"
        value="true"/>
-   <TcPropertyConstantAttach constantName="Enabled" typeName="ItemRevision" propertyName="aw2_CountNumber"
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItem" propertyName="aw2_testper2"
        value="true"/>
-   <TcPropertyConstantAttach constantName="Enabled" typeName="ItemRevision" propertyName="aw2_Number"
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItem" propertyName="aw2_testRuntime"
        value="true"/>
-   <TcPropertyConstantAttach constantName="Modifiable" typeName="Item" propertyName="aw2Integer_1"
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItemRevision"
+       propertyName="aw2_approver" value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItemRevision"
+       propertyName="aw2_date" value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItemRevision"
+       propertyName="aw2_is_approve" value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItemRevision"
+       propertyName="aw2_material_type" value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="AW2_TestItemRevision"
+       propertyName="aw2_status" value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="Schedule" propertyName="aw2_PM"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="Schedule" propertyName="aw2_ProjectDivision"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="Schedule" propertyName="aw2_useTemplate"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="ScheduleTask" propertyName="aw2_Status"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItem2" propertyName="aw2_test1"
        value="Write"/>
-   <TcPropertyConstantAttach constantName="Modifiable" typeName="Item" propertyName="aw2Integer_2"
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItem2" propertyName="aw2_test2"
        value="Write"/>
-   <TcPropertyConstantAttach constantName="Modifiable" typeName="Item" propertyName="aw2Integer_3"
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItem" propertyName="aw2_testper1"
        value="Write"/>
-   <TcPropertyConstantAttach constantName="Modifiable" typeName="ItemRevision" propertyName="aw2_CountNumber"
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItem" propertyName="aw2_testper2"
        value="Write"/>
-   <TcPropertyConstantAttach constantName="Modifiable" typeName="ItemRevision" propertyName="aw2_Number"
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItem" propertyName="aw2_testRuntime"
        value="Write"/>
-   <TcExtension name="AW2ChangeDatasetCreatePost" internal="false" cannedExtension="false"
-       languageType="CPlusPlus" libraryName="libAW2Runtime" description="AW2ChangeDatasetCreatePost">
-     <TcExtensionValidity parameter="TYPE:IMAN_specification:createPost#Teamcenter::CreateInput,*:3"/>
-   </TcExtension>
-   <TcExtension name="AW2PPItemRevisionCreatePost" internal="false" cannedExtension="false"
-       languageType="CPlusPlus" libraryName="libAW2Runtime" description="">
-     <TcExtensionValidity parameter="TYPE:ItemRevision:createPost#Teamcenter::CreateInput,*:3"/>
-   </TcExtension>
-   <TcExtensionAttach extensionName="AW2PPItemRevisionCreatePost" operationName="createPost#Teamcenter::CreateInput,*"
-       isActive="true" extendableElementName="ItemRevision" extendableElementType="Type"
-       extensionPointType="PostAction" conditionName="isTrue" description=""/>
-   <TcExtensionAttach extensionName="AW2ChangeDatasetCreatePost" operationName="createPost#Teamcenter::CreateInput,*"
-       isActive="true" extendableElementName="IMAN_specification" extendableElementType="Type"
-       extensionPointType="PostAction" conditionName="isTrue" description=""/>
-   <TcLOV name="AW2_CountNumber_LOV" lovType="ListOfValuesString" usage="Exhaustive"
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItemRevision"
+       propertyName="aw2_approver" value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItemRevision"
+       propertyName="aw2_date" value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItemRevision"
+       propertyName="aw2_is_approve" value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItemRevision"
+       propertyName="aw2_material_type" value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="AW2_TestItemRevision"
+       propertyName="aw2_status" value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="Schedule" propertyName="aw2_PM"
+       value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="Schedule" propertyName="aw2_ProjectDivision"
+       value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="Schedule" propertyName="aw2_useTemplate"
+       value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="ScheduleTask" propertyName="aw2_Status"
+       value="Write"/>
+   <TcNamingRule name="AW2Schedule ID Rule">
+     <TcPattern generateCounters="true" patternString="NNNNNN">
+       <TcCounter initialValue="000100" maximumValue="999999"/>
+     </TcPattern>
+   </TcNamingRule>
+   <TcNamingRuleAttach ruleName="AW2Schedule ID Rule" typeName="Schedule" propertyName="item_id"
+       case="Mix" conditionName="isTrue" override="false" ruleType="NamingRule" description=""/>
+   <TcLOV name="AW2_MaterialTypeLOV" lovType="ListOfValuesString" usage="Exhaustive"
        description="">
-     <TcLOVValue value="One" description="" conditionName="isTrue"/>
-     <TcLOVValue value="Two" description="" conditionName="isTrue"/>
-     <TcLOVValue value="Three" description="" conditionName="isTrue"/>
-     <TcLOVValue value="Four" description="" conditionName="isTrue"/>
-     <TcLOVValue value="Five" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Aluminum" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Paper" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Plastic" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Steel" description="" conditionName="isTrue"/>
    </TcLOV>
-   <TcLOVAttach lovName="AW2_CountNumber_LOV" typeName="ItemRevision">
-     <TcLOVAttachPropertyInfo valuePropertyName="aw2_CountNumber" conditionName="isTrue"
+   <TcLOV name="AW2_ProjectDivision" lovType="ListOfValuesString" usage="Exhaustive"
+       description="">
+     <TcLOVValue value="A" description="" conditionName="isTrue"/>
+     <TcLOVValue value="B" description="" conditionName="isTrue"/>
+     <TcLOVValue value="C" description="" conditionName="isTrue"/>
+     <TcLOVValue value="D" description="" conditionName="isTrue"/>
+   </TcLOV>
+   <TcLOV name="AW2_ProjectStatus" lovType="ListOfValuesString" usage="Exhaustive"
+       description="">
+     <TcLOVValue value="Excellent" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Good" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Normal" description="" conditionName="isTrue"/>
+     <TcLOVValue value="Bad" description="" conditionName="isTrue"/>
+   </TcLOV>
+   <TcLOVAttach lovName="AW2_MaterialTypeLOV" typeName="AW2_TestItemRevision">
+     <TcLOVAttachPropertyInfo valuePropertyName="aw2_material_type" conditionName="isTrue"
          override="false" level="0"/>
    </TcLOVAttach>
+   <TcLOVAttach lovName="AW2_ProjectDivision" typeName="Schedule">
+     <TcLOVAttachPropertyInfo valuePropertyName="aw2_ProjectDivision" conditionName="isTrue"
+         override="false" level="0"/>
+   </TcLOVAttach>
+   <TcLOVAttach lovName="AW2_ProjectStatus" typeName="ScheduleTask">
+     <TcLOVAttachPropertyInfo valuePropertyName="aw2_Status" conditionName="isTrue"
+         override="false" level="0"/>
+   </TcLOVAttach>
+   <Functionality name="AW2training" displayName="training" enabledForVerificationRules="false"
+       description="Component for the template - aw2training"/>
 </Add>
 </TcBusinessData>

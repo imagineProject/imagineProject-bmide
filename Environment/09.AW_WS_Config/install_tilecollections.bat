@@ -1,8 +1,8 @@
 @echo off
 
 SET INFOPWD=infodba
-SET TC_ROOT=C:\Siemens\Teamcenter14
-SET TC_DATA=C:\Siemens\tcdata
+SET TC_ROOT=C:\Siemens\Teamcenter2506
+SET TC_DATA=C:\Siemens\Teamcenter2506\tc_data
 
 call %TC_DATA%\tc_profilevars
 
@@ -16,6 +16,9 @@ rem Default
 aws2_install_tilecollections -u=infodba -p=infodba -g=dba -file=%~dp0%import_new_awc_tiles.xml -mode=add
 aws2_install_tilecollections -u=infodba -p=infodba -g=dba -file=%~dp0%import_new_awc_tiles.xml -mode=update
 aws2_install_tilecollections -u=infodba -p=infodba -g=dba -file=%~dp0%import_remove_awc_tiles.xml -mode=remove
+
+aws2_install_tilecollections -u=infodba -p=infodba -g=dba -file=%~dp0%import_egtech_tiles.xml -mode=add
+aws2_install_tilecollections -u=infodba -p=infodba -g=dba -file=%~dp0%import_egtech_tiles.xml -mode=update
 
 rem PMS
 

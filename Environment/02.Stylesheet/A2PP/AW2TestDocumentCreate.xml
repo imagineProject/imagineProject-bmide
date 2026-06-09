@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+// @<COPYRIGHT>@
+// ==================================================
+// Copyright 2014.
+// Siemens Product Lifecycle Management Software Inc.
+// All Rights Reserved.
+// ==================================================
+// @<COPYRIGHT>@
+-->
+<!-- Style sheet rendering for special Document creation (#1). -->
+<rendering>
+  <page>
+	<section titleKey="tc_xrt_Properties">
+      <property name="item_id" renderingHint="textfield"/>
+      
+      <property name="revision:item_revision_id"/>
+      <property name="revision:aw2_status" renderingHint="label" initialValue="작성중"/>
+      <property name="revision:aw2_material_type" renderingHint="lovcombobox" />
+      <property name="revision:item_revision_id" renderingHint="textfield" modifiable="false"/>
+      <property name="revision:object_desc" renderingHint="textarea" labelKey="tc_xrt_Description"/>
+      <property name="revision:aw2_date" renderingHint="datepicker"/>
+      <property name="revision:aw2_is_approve" renderingHint="togglebutton"/>
+    
+    <property name="revision:aw2_approver" visibleWhen="revision:aw2_is_approve == 'True'"/>
+	    <property name="object_desc"/>
+        <property name="object_name"/>
+		<property name="aw2_testper1" />
+		
+      <htmlPanel declarativeKey="Awp0MultiFileUpload" />
+      
+    </section>
+  </page>
+</rendering>

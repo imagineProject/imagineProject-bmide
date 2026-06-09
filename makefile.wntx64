@@ -29,8 +29,6 @@
 #  The following environment variables are required to be set: 
 #    TC_BIN         The bin folder in the Teamcenter installation.
 #    JRE_HOME       The root location of a Java JRE (or JDK). 
-#    JAVA_HOME      The root location of a Java JDK.
-#    PATH           The PATH variable must include JAVA_HOME\bin folder.
 #
 # =============================================================================
 
@@ -47,9 +45,9 @@ NET_CONFIG         = Release
 BASE_PATH          = C:\Siemens\Teamcenter2506\teamcenter_root\bmide\workspace\2506000.0.0\aw2training
 TC_ROOT            = C:\Siemens\Teamcenter2506\teamcenter_root
 TEMPLATE_HOME      = C:\Siemens\TEAMCE~1\TEAMCE~1\bmide\templates
-SOA_CLIENT_KIT     = C:\DeploymentCenter\repository\software\tc2506_wntx64\soa_client
+SOA_CLIENT_KIT     = 
 RAC_HOME           = 
-COMPILER_HOME	   = C:\PROGRA~2\MICROS~2\2019\Community\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64
+COMPILER_HOME	   = 
 
 
 
@@ -130,13 +128,10 @@ PROJECT_TC         = $(BASE_PATH)\$(PROJECT_OUT_HOME)\packaging\tc
 
 all : aw2training_project_all
 
-include build\AW2Runtime\makefile
-include build\AW2SoaPp\makefile
-include build\AW2SoaTT\makefile
-include build\Aw2trainingWsdl\makefile
+include build\AW2Training\makefile
 
 
-aw2training_project_all : build_message create_out_folders  AW2Runtime_all   AW2SoaPp_all   AW2SoaTT_all   Aw2trainingWsdl_all  
+aw2training_project_all : build_message create_out_folders  AW2Training_all  
 	@echo ________________________________________________________________________________
 	@echo Successfully Built All Libraries for aw2training
 	@echo ________________________________________________________________________________
@@ -146,7 +141,7 @@ build_message :
 	@echo Building All Libraries for aw2training
 	@echo ________________________________________________________________________________
 
-clean : clean_message  AW2Runtime_clean AW2SoaPp_clean AW2SoaTT_clean Aw2trainingWsdl_clean
+clean : clean_message  AW2Training_clean
 	@echo ________________________________________________________________________________
 	@echo Successfully Cleaned All Generated Files for aw2training
 	@echo ________________________________________________________________________________

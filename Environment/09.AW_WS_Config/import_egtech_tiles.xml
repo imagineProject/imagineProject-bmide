@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ActiveWorkspaceGateway SYSTEM "Awp0aws2ActiveWorkspaceGateway.dtd">
+<ActiveWorkspaceGateway version="1.0">
+
+    <TileTemplate templateId="EGTechMPECRTemplate">
+        <ThemeIndex index="1"/>
+        <Icon>cmdOpen24</Icon>
+        <Action>egTechMPECR</Action>
+        <ActionType type="0"/>
+        <Sizes>
+            <SupportedSize size="0"/>
+            <SupportedSize size="1"/>
+        </Sizes>
+    </TileTemplate>
+
+    <Tile tileId="EGTechMPECRTile" templateId="EGTechMPECRTemplate">
+        <Name>MPECN</Name>
+    </Tile>
+
+    <TileCollection>
+        <RoleScope role="DBA"/>
+        <CollectionTiles tileId="EGTechMPECRTile" groupName="EGTech" size="1"/>
+    </TileCollection>
+
+</ActiveWorkspaceGateway>

@@ -30,19 +30,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Generated Source (AW2Runtime)</name>
+			<name>Generated Source (AW2Training)</name>
 			<type>2</type>
-			<locationURI>PROJECT_LOC/output/generated/AW2Runtime</locationURI>
-		</link>
-		<link>
-			<name>Generated Source (AW2SoaPp)</name>
-			<type>2</type>
-			<locationURI>PROJECT_LOC/output/generated/AW2SoaPp</locationURI>
-		</link>
-		<link>
-			<name>Generated Source (AW2SoaTT)</name>
-			<type>2</type>
-			<locationURI>PROJECT_LOC/output/generated/AW2SoaTT</locationURI>
+			<locationURI>PROJECT_LOC/output/generated/AW2Training</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,0 +1,41 @@
+# Build outputs
+/bin/
+/build/
+/output/
+/target/
+/dist/
+
+# Generated files
+/generated/
+/gen/
+
+# Logs and temp
+/logs/
+/temp/
+/tmp/
+*.log
+*.tmp
+*.bak
+*.backup
+
+# C/C++ build artifacts
+*.obj
+*.o
+*.lib
+*.dll
+*.pdb
+*.exp
+*.ilk
+*.exe
+
+# Java / Eclipse build artifacts
+*.class
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Teamcenter / BMIDE temporary files
+*.sim
+*.bak
+*.old
